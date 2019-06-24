@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Categories</h1>
+<ul>
+{%for c in xcategories %}
+<li><a href = "{{url_for('showCategoryItems', category_name = c.name)}}"
+        style="color:black">{{c.name}}</a>
+
+</li>
+{%endfor%}
+</ul>
+<h3><a href="{{url_for('addNewItem')}}"> Add New Item </a></h3>
+<h2>Recently Added</h2>
+<ul> {% for i in xitems %}
+<li>{{i.name}} -  ({{i.category.name}})</a>
+</li>
+{%endfor%}
+</ul>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Categories</h1>
+<ul>
+{%for c in xcategories %}
+<li>
+{{c.name}}
+</li>
+{%endfor%}
+</ul>
+<h2> Items in {{xcat_name}}</h2>
+<ul> {% for i in xitems %}
+<li><a href = "{{url_for('showSelectedItem', category_name=xcat_name, item_name = i.name)}}"
+        style="color:black">{{i.name}} - ({{i.category.name}}) </a>
+        </li>
+{%endfor%}
+</ul>
+</body>
+</html>

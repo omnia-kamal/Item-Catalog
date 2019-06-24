@@ -1,0 +1,12 @@
+{% include "header.html" %}
+
+<h1 class="header">Edit Item</h1>
+<form action="{{url_for('editSelectedItem' ,category_name=category_name, item_name=item_name, item=editedItem)}}"
+  method="POST">
+  <p>Name:</p>
+  <input type="text" size="30" name="name" placeholder = '{{item.name}}'>
+  <p>Description:</p>
+  <input type="text" size="30"  name="description" placeholder = '{{item.description}}'>
+ 
+  <input type="submit" value ="Update">
+  <a href="{{url_for('showCategoriesAndItems')}}">Cancel</a>

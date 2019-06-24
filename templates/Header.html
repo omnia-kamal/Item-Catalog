@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+      {%if 'username' not in session %}
+      <a class="button" href="{{url_for('showLogin')}}">Login </a>
+      {% endif %}
+    <header>

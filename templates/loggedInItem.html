@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>{{xcategoryname}}</h1>
+
+
+<h3>
+{{xitemSelected.name}}</h3>
+
+<p>{{xitemSelected.description}}
+<a href="{{url_for('editSelectedItem', category_name = xcategoryname, item_name = xitemSelected.name)}}"> Edit </a>
+<a href="{{url_for('deleteSelectedItem', category_name = xcategoryname, item_name = xitemSelected.name)}}"> Delete </a></p>
+
+
+
+
+</body>
+</html>
